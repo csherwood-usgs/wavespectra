@@ -3,7 +3,7 @@ import numpy as np
 import xarray as xr
 
 from wavespectra.core.attributes import attrs
-from wavespectra.core.specpart import partition
+from wavespectra.core import specpart
 from wavespectra.core.utils import D2R, R2D, celerity
 from wavespectra.core.npstats import hs
 
@@ -26,7 +26,7 @@ def nppart(spectrum, freq, dir, wspd, wdir, dpt, swells=3, agefac=1.7, wscut=0.3
         - specpart (3darray): Wave spectrum partitions with shape (np, nf, nd).
 
     """
-    part_array = partition(spectrum)
+    part_array = specpart.partition(spectrum)
 
     Up = agefac * wspd * np.cos(D2R * (dir - wdir))
     windbool = np.tile(Up, (freq.size, 1)) > np.tile(
