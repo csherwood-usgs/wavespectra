@@ -6,7 +6,7 @@ dask
 gcsfs
 fsspec
 ipython
-matplotlib
+matplotlib<3.4
 mock
 netcdf4
 numba
