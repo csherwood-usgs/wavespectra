@@ -79,6 +79,7 @@ install_requires = [
     "gcsfs",
     "fsspec",
     "matplotlib",
+    "numba",
     "numpy",
     "pandas",
     "python-dateutil",
@@ -86,7 +87,7 @@ install_requires = [
     "sortedcontainers",
     "scipy",
     "toolz",
-    "xarray>=0.15",
+    "xarray",
     "zarr",
 ]
 
