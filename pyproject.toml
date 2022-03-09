@@ -1,9 +1,36 @@
 [tool.poetry]
 name = "wavespectra"
-version = "3.10.0"
-description = "Python library for ocean wave spectra"
+version = "3.10.1"
+description = "Library for ocean wave spectra"
 authors = ["Wavespectra Developers <r.guedes@oceanum.science>"]
 license = "MIT"
+maintainers = [
+    "Rafael Guedes <r.guedes@oceanum.science>",
+    "Tom Durrant <t.durrant@oceanum.science>"
+]
+readme = "README.rst"
+repository = "https://github.com/wavespectra/wavespectra/tree/master/wavespectra"
+documentation = "https://wavespectra.readthedocs.io/en/latest/"
+keywords = ["wave", "spectra", "ocean", "xarray", "analysis"]
+include = [
+    "wavespectra/output/ww3.yml",
+    "wavespectra/core/attributes.yml",
+    "wavespectra/specpart/specpart.f90",
+    "wavespectra/specpart/specpart.pyf"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Topic :: Scientific/Engineering :: Visualization"
+]
 
 [tool.poetry.dependencies]
 python = ">=3.8,<3.11"
@@ -29,6 +56,9 @@ zarr = "^2.11.1"
 black = "^22.1.0"
 pytest = "^7.0.1"
 tox = "^3.24.5"
+
+[tool.poetry.extras]
+netcdf4 = ["netCDF4"]
 
 [build-system]
 requires = ["poetry-core>=1.0.0", "numpy"]
