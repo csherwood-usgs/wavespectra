@@ -13,8 +13,8 @@ CLASSIFIERS = [
     "License :: OSI Approved :: MIT License",
     "Natural Language :: English",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.7",
     "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
     "Topic :: Scientific/Engineering",
     "Topic :: Scientific/Engineering :: Physics",
     "Topic :: Scientific/Engineering :: Visualization",
@@ -76,11 +76,10 @@ install_requires = [
     "click",
     "cmocean",
     "dask",
-    "gcsfs",
-    "fsspec",
+    "hypothesis",
     "matplotlib",
     "numba",
-    "numpy",
+    "numpy<=1.21",
     "pandas",
     "python-dateutil",
     "pyyaml",
@@ -88,7 +87,6 @@ install_requires = [
     "scipy",
     "toolz",
     "xarray",
-    "zarr",
 ]
 
 setup_requirements = ["pytest-runner"]

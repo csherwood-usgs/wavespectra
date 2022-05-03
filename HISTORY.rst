@@ -12,8 +12,30 @@ changelog covers the release history since v3.0 when wavespectra was open-source
 Releases
 ********
 
-3.9.1 (2021-08-21)
-__________________
+3.11.0 (2022-05-04)
+___________________
+
+New Features
+------------
+* New reader for Octopus file format by `RubendeBruin`_ (`PR65 <https://github.com/wavespectra/wavespectra/pull/65>`_).
+
+Bug Fixes
+---------
+* Fix bug in direction calculation caused by changes in xr ufuncs (`PR59 <https://github.com/wavespectra/wavespectra/pull/59>`_).
+* Fix nrecs in test octopus file.
+* Fix to zarr testing by `RubendeBruin`_ (`PR55 <https://github.com/wavespectra/wavespectra/pull/55>`_).
+
+Internal Changes
+----------------
+* Only interpolate with inverse distance weighting if 2 or more neighbour sites are found within tolerance (`PR62 <https://github.com/wavespectra/wavespectra/pull/62>`_).
+* Allow pathlib objects in read_swan (`PR64 <https://github.com/wavespectra/wavespectra/pull/64>`_).
+* Increase float precision in Octopus writer.
+* Make zarr, fsspec and gcsfs extra dependencies instead of default.
+* Remove `get_mapper` call from zarr opener.
+
+
+3.10.0 (2021-08-21)
+___________________
 
 New Features
 ------------
@@ -39,6 +61,7 @@ Internal Changes
 * Fixed sphinx-gallery dependency by by `RubendeBruin`_ (`PR41 <https://github.com/wavespectra/wavespectra/pull/41>`_).
 * Add new funwave functiont to docs.
 * Update authors list.
+* Allow pathlib objects in read_triaxys.
 
 
 Deprecation
